@@ -515,23 +515,45 @@
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
+            <h4 class="c-grey-900 mT-10 mB-30">Chi tiết báo cáo</h4>
             <div class="row gap-20 masonry pos-r">
               <div class="masonry-sizer col-md-6"></div>
-
               <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Tạo báo cáo</h6>
                   <div class="mT-30">
                     <form>
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputEmail4">Tên báo cáo</label>
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="Tên">
+                          <input type="email" class="form-control" id="inputEmail4" placeholder="Kiểm tra cột điện đèn đường">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail4">Tên người báo cáo</label>
+                          <input type="email" class="form-control" id="inputEmail4" placeholder="Joe Doe">
+                        </div>
+
+                      </div>
+                      <div class="form-group">
+                        <label for="inputAddress">Địa điểm kiểm tra</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Số 133 - Phố Bùi Thị Xuân - Hà Nội">
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-md-4">
+                          <label for="inputState">Tình trạng thiết bị</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>1</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputState">Thiết bị</label>
                           <select id="inputState" class="form-control">
-                            <option selected>Thiết bị</option>
+                            <option selected>Cột điện</option>
                             <option>Cột điện</option>
                             <option>Dây điện</option>
                             <option>Máy biến áp</option>
@@ -539,26 +561,10 @@
                           </select>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="inputAddress">Địa điểm kiểm tra</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Trạm điện số 1 - khu đô thị Xa La - Hà Đông...">
-                      </div>
-
                       <div class="form-row">
-
-                        <div class="form-group col-md-4">
-                          <label for="inputState">Tình trạng thiết bị</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Tình trạng</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                          <label for="inputSate">Mô tả sự cố</label>
-                          <input type="text" class="form-control" id="inputZip">
-                        </div>
+                        <label for="inputDescript">Mô tả báo cáo</label>
+                        <textarea class="form-control" >Tình trạng cột điện tốt không bị hư hại gì đáng kể</textarea>
+                        <!-- <textarea type="text" class="form-control" id="inputDescript" placeholder="Tình trạng cột điện tốt không bị hư hại gì đáng kể"> -->
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
@@ -568,17 +574,8 @@
                               <div class="input-group-addon bgc-white bd bdwR-0">
                                 <i class="ti-calendar"></i>
                               </div>
-                              <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Datepicker" data-provide="datepicker">
-
+                              <input type="text" class="form-control bdc-grey-200 start-date" placeholder="12/05/2020" data-provide="datepicker" >
                             </div>
-                            <label class="fw-500">Ảnh sự cố</label>
-
-                            <button type="button" class="btn btn-dark" onclick="chooseFile();">choose file</button>
-                              <script>
-                               function chooseFile() {
-                                  document.getElementById("fileInput").click();
-                               }
-                               </script>
                           </div>
                         </div>
                       </div>
@@ -586,85 +583,13 @@
                         <input type="file" id="fileInput" name="fileInput" />
                      </div>
 
-                      <button type="submit" class="btn btn-primary">Gửi báo cáo</button>
+                      <!-- <button type="submit" class="btn btn-primary">Gửi báo cáo</button> -->
                     </form>
                   </div>
                 </div>
               </div>
 
-              <div class="masonry-item col-md-6">
-                <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Tạo báo cáo</h6>
-                  <div class="mT-30">
-                    <form>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputEmail4">Tên báo cáo</label>
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="Tên">
-                        </div>
-                        <div class="form-group col-md-4">
-                          <label for="inputState">Thiết bị</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Thiết bị</option>
-                            <option>Cột điện</option>
-                            <option>Dây điện</option>
-                            <option>Máy biến áp</option>
-                            <option>Bóng điện cao áp</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputAddress">Địa điểm kiểm tra</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Trạm điện số 1 - khu đô thị Xa La - Hà Đông...">
-                      </div>
 
-                      <div class="form-row">
-
-                        <div class="form-group col-md-4">
-                          <label for="inputState">Tình trạng thiết bị</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Tình trạng</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                          <label for="inputSate">Mô tả sự cố</label>
-                          <input type="text" class="form-control" id="inputZip">
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label class="fw-500">Ngày kiểm tra</label>
-                          <div class="timepicker-input input-icon form-group">
-                            <div class="input-group">
-                              <div class="input-group-addon bgc-white bd bdwR-0">
-                                <i class="ti-calendar"></i>
-                              </div>
-                              <input type="text" class="form-control bdc-grey-200 start-date" placeholder="Datepicker" data-provide="datepicker">
-
-                            </div>
-                            <label class="fw-500">Ảnh sự cố</label>
-
-                            <button type="button" class="btn btn-dark" onclick="chooseFile();">choose file</button>
-                              <script>
-                               function chooseFile() {
-                                  document.getElementById("fileInput").click();
-                               }
-                               </script>
-                          </div>
-                        </div>
-                      </div>
-                      <div style="height:0px;overflow:hidden">
-                        <input type="file" id="fileInput" name="fileInput" />
-                     </div>
-
-                      <button type="submit" class="btn btn-primary">Gửi báo cáo</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
               <!-- <div class="masonry-item col-md-6">
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Validation</h6>
@@ -727,6 +652,28 @@
               </div>
             </div>
           </div> -->
+          <div class="masonry-item col-md-6">
+            <div class="bgc-white p-20 bd">
+              <h6 class="c-grey-900">Hồ sơ ảnh</h6>
+              <div class="mT-30">
+                <img src="assets/static/images/DoCotDien.jpg" alt="" style="width:250px;height:200px;">
+                <img src="assets/static/images/AAGxsZ5.jpg" alt="" style="width:250px;height:200px;">
+              </div>
+              <div class="mT-30">
+                <!-- <img src="assets/static/images/AAGxsZ5.jpg" alt="" style="width:50px;height:50px;"> -->
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item col-md-6">
+            <div class="bgc-white p-20 bd">
+              <h6 class="c-grey-900">Vị trí kiểm tra</h6>
+              <div class="mT-30">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50116.05183726697!2d105.8394342848621!3d20.996731904931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x773974e19c0b672!2zMTMzIELDuWkgVGjhu4sgWHXDom4sIEhhaSBCw6AgVHLGsG5nLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1589295328863!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+              </div>
+
+            </div>
+          </div>
         </main>
 
         <!-- ### $App Screen Footer ### -->
