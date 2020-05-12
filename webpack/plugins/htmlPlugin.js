@@ -14,6 +14,7 @@ const titles = {
   'datatable': 'Datatable',
   'email': 'Email',
   'forms': 'Forms',
+  'report-detail':'Report Detail',
   'google-maps': 'Google Maps',
   'signin': 'Signin',
   'signup': 'Signup',
