@@ -15,23 +15,30 @@ export default (function () {
     new Chart(lineCtx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
         datasets: [{
-          label                : 'Series A',
+          label                : 'Thiết bị A',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : [60, 50, 70, 60, 50, 70, 60],
+          data                 : [60, 50, 70, 60, 50, 70, 60, 60, 50, 70, 60, 50, 70],
         }, {
-          label                : 'Series B',
+          label                : 'Thiết bị B',
           backgroundColor      : 'rgba(232, 245, 233, 0.5)',
           borderColor          : COLORS['blue-500'],
           pointBackgroundColor : COLORS['blue-700'],
           borderWidth          : 2,
-          data                 : [70, 75, 85, 70, 75, 85, 70],
+          data                 : [65, 55, 72, 61, 47, 66, 56, 63, 57, 74, 61, 53, 72],
+        }, {
+          label                : 'Thiết bị C',
+          backgroundColor      : 'rgba(255, 255, 255, 0.5)',
+          borderColor          : COLORS['red-500'],
+          pointBackgroundColor : COLORS['red-700'],
+          borderWidth          : 2,
+          data                 : [68, 62, 73, 69, 63, 66, 66, 69, 67, 76, 71, 63, 75],
         }],
-      },
+      }, 
 
       options: {
         legend: {
@@ -54,19 +61,31 @@ export default (function () {
     new Chart(barCtx, {
       type: 'bar',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'],
         datasets: [{
-          label           : 'Dataset 1',
+          label           : 'Cột điện',
           backgroundColor : COLORS['deep-purple-500'],
           borderColor     : COLORS['deep-purple-800'],
           borderWidth     : 1,
-          data            : [10, 50, 20, 40, 60, 30, 70],
+          data            : [2, 1, 3, 1, 0],
         }, {
-          label           : 'Dataset 2',
+          label           : 'Dây điện',
           backgroundColor : COLORS['light-blue-500'],
           borderColor     : COLORS['light-blue-800'],
           borderWidth     : 1,
-          data            : [10, 50, 20, 40, 60, 30, 70],
+          data            : [3, 4, 5, 3, 2],
+        },{
+          label           : 'Trạm biến áp',
+          backgroundColor : COLORS['green-500'],
+          borderColor     : COLORS['green-800'],
+          borderWidth     : 1,
+          data            : [1,2,1,1,0],
+        },{
+          label           : 'Bóng điện',
+          backgroundColor : COLORS['yellow-500'],
+          borderColor     : COLORS['yellow-800'],
+          borderWidth     : 1,
+          data            : [6,7,7,8,4],
         }],
       },
 
@@ -91,57 +110,16 @@ export default (function () {
     new Chart(areaCtx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'],
         datasets: [{
           backgroundColor : 'rgba(3, 169, 244, 0.5)',
           borderColor     : COLORS['light-blue-800'],
-          data            : [10, 50, 20, 40, 60, 30, 70],
-          label           : 'Dataset',
+          data            : [10, 13, 9, 15, 4],
+          label           : 'Số cảnh baó',
           fill            : 'start',
         }],
       },
     });
   }
 
-  // ------------------------------------------------------
-  // @Scatter Charts
-  // ------------------------------------------------------
-
-  const scatterChartBox = document.getElementById('scatter-chart');
-
-  if (scatterChartBox) {
-    const scatterCtx = scatterChartBox.getContext('2d');
-
-    Chart.Scatter(scatterCtx, {
-      data: {
-        datasets: [{
-          label           : 'My First dataset',
-          borderColor     : COLORS['red-500'],
-          backgroundColor : COLORS['red-500'],
-          data: [
-            { x: 10, y: 20 },
-            { x: 30, y: 40 },
-            { x: 50, y: 60 },
-            { x: 70, y: 80 },
-            { x: 90, y: 100 },
-            { x: 110, y: 120 },
-            { x: 130, y: 140 },
-          ],
-        }, {
-          label           : 'My Second dataset',
-          borderColor     : COLORS['green-500'],
-          backgroundColor : COLORS['green-500'],
-          data: [
-            { x: 150, y: 160 },
-            { x: 170, y: 180 },
-            { x: 190, y: 200 },
-            { x: 210, y: 220 },
-            { x: 230, y: 240 },
-            { x: 250, y: 260 },
-            { x: 270, y: 280 },
-          ],
-        }],
-      },
-    });
-  }
 }())
