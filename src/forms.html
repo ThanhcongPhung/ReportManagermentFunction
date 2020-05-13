@@ -478,38 +478,39 @@
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Tạo báo cáo</h6>
                   <div class="mT-30">
-                    <form>
+                    <form class="container" id="needs-validation" novalidate>
+
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputEmail4">Tên báo cáo</label>
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="...">
+                          <input type="text" class="form-control" id="validationCustom01" placeholder="..." value="" required>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputEmail4">Tên người báo cáo</label>
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="Joe Doe">
+                          <input type="text" class="form-control" id="inputEmail4" placeholder="Joe Doe" required>
                         </div>
 
                       </div>
                       <div class="form-group">
                         <label for="inputAddress">Địa điểm kiểm tra</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Ví dụ: Số 133 - Phố Bùi Thị Xuân...">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Ví dụ: Số 133 - Phố Bùi Thị Xuân..." required>
                       </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputState">Tình trạng thiết bị</label>
-                          <select id="inputState" class="form-control">
+                          <select id="inputState" class="form-control" required>
                             <option selected>Chọn...</option>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
                           </select>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-4" >
                           <label for="inputState">Thiết bị</label>
-                          <select id="inputState" class="form-control">
+                          <select id="inputState" class="form-control" required>
                             <option selected>Chọn...</option>
                             <option>Cột điện</option>
                             <option>Dây điện</option>
@@ -521,7 +522,6 @@
                       <div class="form-row">
                         <label for="inputDescript">Mô tả báo cáo</label>
                         <textarea class="form-control"></textarea>
-                        <!-- <textarea type="text" class="form-control" id="inputDescript" placeholder="Tình trạng cột điện tốt không bị hư hại gì đáng kể"> -->
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
@@ -531,7 +531,7 @@
                               <div class="input-group-addon bgc-white bd bdwR-0">
                                 <i class="ti-calendar"></i>
                               </div>
-                              <input type="text" class="form-control bdc-grey-200 start-date" placeholder="..." data-provide="datepicker" >
+                              <input type="text" class="form-control bdc-grey-200 start-date" placeholder="..." data-provide="datepicker" required>
                             </div>
                           </div>
                         </div>
@@ -554,51 +554,7 @@
                    </div>
                       <button type="submit" class="btn btn-primary">Gửi báo cáo</button>
                     </form>
-                  </div>
-                </div>
-              </div>
-
-              <!-- <div class="masonry-item col-md-6">
-                <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Validation</h6>
-                  <div class="mT-30">
-                    <form class="container" id="needs-validation" novalidate>
-                      <div class="row">
-                        <div class="col-md-6 mb-3">
-                          <label for="validationCustom01">First name</label>
-                          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                          <label for="validationCustom02">Last name</label>
-                          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-6 mb-3">
-                          <label for="validationCustom03">City</label>
-                          <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-                          <div class="invalid-feedback">
-                            Please provide a valid city.
-                          </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                          <label for="validationCustom04">State</label>
-                          <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-                          <div class="invalid-feedback">
-                            Please provide a valid state.
-                          </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                          <label for="validationCustom05">Zip</label>
-                          <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-                          <div class="invalid-feedback">
-                            Please provide a valid zip.
-                          </div>
-                        </div>
-                      </div>
-                      <button class="btn btn-primary" type="submit">Submit form</button>
-                    </form> -->
-                    <!-- <script>
+                    <script>
                       // Example starter JavaScript for disabling form submissions if there are invalid fields
                       (function() {
                         'use strict';
@@ -614,12 +570,14 @@
                           }, false);
                         }, false);
                       })();
-                    </script> -->
-                  <!-- </div>
+                    </script>
+                  </div>
                 </div>
+
+              </div>
               </div>
             </div>
-          </div> -->
+          </div>
         </main>
 
         <!-- ### $App Screen Footer ### -->
