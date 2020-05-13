@@ -84,14 +84,14 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
-     
+
       /* Custom filtering function which will search data in column four between two values */
 $.fn.dataTable.ext.search.push(
     function( settings, data, dataIndex ) {
         var min = parseInt( $('#min').val(), 10 );
         var max = parseInt( $('#max').val(), 10 );
         var age = parseFloat( data[2] ) || 0; // use data for the age column
- 
+
         if ( ( isNaN( min ) && isNaN( max ) ) ||
              ( isNaN( min ) && age <= max ) ||
              ( min <= age   && isNaN( max ) ) ||
@@ -102,7 +102,7 @@ $.fn.dataTable.ext.search.push(
         return false;
     }
 );
- 
+
     </script>
 
     <!-- @App Content -->
@@ -119,11 +119,11 @@ $.fn.dataTable.ext.search.push(
                   <div class="peers ai-c fxw-nw">
                     <div class="peer">
                       <div class="logo">
-                        <img src="assets/static/images/logo.png" alt="">
+                        <img src="assets/static/images/logo2.jpg" alt="" height="42" width="42">
                       </div>
                     </div>
                     <div class="peer peer-greed">
-                      <h5 class="lh-1 mB-0 logo-text">Adminator</h5>
+                      <h5 class="lh-1 mB-0 logo-text">Electric Managerment System</h5>
                     </div>
                   </div>
                 </a>
@@ -141,67 +141,43 @@ $.fn.dataTable.ext.search.push(
           <!-- ### $Sidebar Menu ### -->
           <ul class="sidebar-menu scrollable pos-r">
             <li class="nav-item mT-30 actived">
-              <a class="sidebar-link" href="/">
+              <a class="sidebar-link" href="index.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-home"></i>
                 </span>
-                <span class="title">Dashboard</span>
+                <span class="title">Trang chủ</span>
               </a>
             </li>
             <li class="nav-item">
               <a class='sidebar-link' href="email.html">
                 <span class="icon-holder">
-                  <i class="c-brown-500 ti-email"></i>
+                  <i class="c-green-500 ti-desktop"></i>
                 </span>
-                <span class="title">Email</span>
+                <span class="title">Quản lý công trình</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="compose.html">
+              <a class='sidebar-link' href="email.html">
                 <span class="icon-holder">
-                  <i class="c-blue-500 ti-share"></i>
+                  <i class="c-black-500 ti-user"></i>
                 </span>
-                <span class="title">Compose</span>
+                <span class="title">Quản lý giám sát</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="calendar.html">
+              <a class='sidebar-link' href="email.html">
                 <span class="icon-holder">
-                  <i class="c-deep-orange-500 ti-calendar"></i>
+                  <i class="c-red-500 ti-location-pin"></i>
                 </span>
-                <span class="title">Calendar</span>
+                <span class="title">Tạo hành trình bản đồ</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="chat.html">
+              <a class='sidebar-link' href="email.html">
                 <span class="icon-holder">
-                  <i class="c-deep-purple-500 ti-comment-alt"></i>
+                  <i class="c-blue-500 ti-world"></i>
                 </span>
-                <span class="title">Chat</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class='sidebar-link' href="charts.html">
-                <span class="icon-holder">
-                  <i class="c-indigo-500 ti-bar-chart"></i>
-                </span>
-                <span class="title">Charts</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class='sidebar-link' href="forms.html">
-                <span class="icon-holder">
-                  <i class="c-light-blue-500 ti-pencil"></i>
-                </span>
-                <span class="title">Forms</span>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="sidebar-link" href="ui.html">
-                <span class="icon-holder">
-                    <i class="c-pink-500 ti-palette"></i>
-                  </span>
-                <span class="title">UI Elements</span>
+                <span class="title">Quản lý dữ liệu chuyến bay</span>
               </a>
             </li>
             <li class="nav-item dropdown">
@@ -209,101 +185,80 @@ $.fn.dataTable.ext.search.push(
                 <span class="icon-holder">
                   <i class="c-orange-500 ti-layout-list-thumb"></i>
                 </span>
-                <span class="title">Tables</span>
+                <span class="title">Báo cáo</span>
                 <span class="arrow">
                   <i class="ti-angle-right"></i>
                 </span>
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class='sidebar-link' href="basic-table.html">Basic Table</a>
-                </li>
-                <li>
-                  <a class='sidebar-link' href="datatable.html">Data Table</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle" href="javascript:void(0);">
-                <span class="icon-holder">
-                    <i class="c-purple-500 ti-map"></i>
-                  </span>
-                <span class="title">Maps</span>
-                <span class="arrow">
-                    <i class="ti-angle-right"></i>
-                  </span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="google-maps.html">Google Map</a>
-                </li>
-                <li>
-                  <a href="vector-maps.html">Vector Map</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle" href="javascript:void(0);">
-                <span class="icon-holder">
-                    <i class="c-red-500 ti-files"></i>
-                  </span>
-                <span class="title">Pages</span>
-                <span class="arrow">
-                    <i class="ti-angle-right"></i>
-                  </span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class='sidebar-link' href="blank.html">Blank</a>
-                </li> 
-                <li>
-                  <a class='sidebar-link' href="404.html">404</a>
-                </li>
-                <li>
-                  <a class='sidebar-link' href="500.html">500</a>
-                </li>
-                <li>
-                  <a class='sidebar-link' href="signin.html">Sign In</a>
-                </li>
-                <li>
-                  <a class='sidebar-link' href="signup.html">Sign Up</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle" href="javascript:void(0);">
-                <span class="icon-holder">
-                  <i class="c-teal-500 ti-view-list-alt"></i>
-                </span>
-                <span class="title">Multiple Levels</span>
-                <span class="arrow">
-                  <i class="ti-angle-right"></i>
-                </span>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>Menu Item</span>
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>Menu Item</span>
-                    <span class="arrow">
-                      <i class="ti-angle-right"></i>
+                  <a class='sidebar-link' href="forms.html">
+                    <span class="icon-holder">
+                      <i class="c-pink-500 ti-plus"></i>
                     </span>
+                    <span class="title">Tạo báo cáo</span>
                   </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="javascript:void(0);">Menu Item</a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);">Menu Item</a>
-                    </li>
-                  </ul>
+                </li>
+                <li>
+                  <a class='sidebar-link' href="datatable.html">
+                    <span class="icon-holder">
+                      <i class="c-green-500 ti-view-list-alt"></i>
+                    </span>
+                    <span class="title">Danh sách báo cáo</span>
+                  </a>
+                </li>
+                <li>
+                  <a class='sidebar-link' href="datatable.html">
+                    <span class="icon-holder">
+                      <i class="c-indigo-500 ti-bar-chart"></i>
+                    </span>
+                    <span class="title">Thống kê số liệu</span>
+                  </a>
                 </li>
               </ul>
             </li>
+
+            <li class="nav-item">
+              <a class='sidebar-link' href="email.html">
+                <span class="icon-holder">
+                  <i class="c-green-500 ti-direction"></i>
+                </span>
+                <span class="title">Quản lý sự cố liên quan đến cây xanh</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class='sidebar-link' href="email.html">
+                <span class="icon-holder">
+                  <i class="c-yellow-500 ti-bolt"></i>
+                </span>
+                <span class="title">Phát hiện thành phần lưới điện</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class='sidebar-link' href="email.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-signal"></i>
+                </span>
+                <span class="title">Quản lý thiết bị bay</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class='sidebar-link' href="email.html">
+                <span class="icon-holder">
+                  <i class="c-black-500 ti-hand-open"></i>
+                </span>
+                <span class="title">Điều khiển thiết bị bay</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class='sidebar-link' href="email.html">
+                <span class="icon-holder">
+                  <i class="c-brown-500 ti-pulse"></i>
+                </span>
+                <span class="title">Phân tích dữ liệu</span>
+              </a>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -522,10 +477,10 @@ $.fn.dataTable.ext.search.push(
                   <li role="separator" class="divider"></li>
                   <li>
                     <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i class="ti-power-off mR-10"></i>                                                                                                                                                                                              
+                      <i class="ti-power-off mR-10"></i>
                       <span>Logout</span>
                     </a>
-                  </li>                                                                         
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -536,11 +491,11 @@ $.fn.dataTable.ext.search.push(
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
             <div class="container-fluid">
-              <h5 class="c-grey-900 mT-10 mB-30"><a href="index.html" style="font-style: italic;"><u>Báo cáo</u></a>/<a href="datatable.html" style="font-style: italic;"><u>Danh sách báo cáo</u></a> </h5></br>
+              <h5 class="c-grey-900 mT-10 mB-30"><a href="index.html" style="font-style: italic;"><u>Báo cáo</u></a>/<a  style="font-style: italic;"><u>Danh sách báo cáo</u></a> </h5></br>
               <div class="row">
                 <div class="col-md-12">
                   <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                    
+
                     <div class="form-row">
                       <h4 class="c-grey-900 mB-20">Danh sách báo cáo</h4>
                       <div class="form-group col-md-2">
@@ -552,7 +507,7 @@ $.fn.dataTable.ext.search.push(
                             <input id="min" type="text" class="form-control bdc-grey-200 start-date" placeholder="Từ" data-provide="datepicker">
                           </div>
                         </div>
-                      </div> 
+                      </div>
                       <div class="form-group col-md-2">
                         <div class="timepicker-input input-icon form-group">
                           <div class="input-group">
@@ -578,7 +533,7 @@ $.fn.dataTable.ext.search.push(
                           <th>Chi tiết</th>
                         </tr>
                       </thead>
-      
+
                         <tbody>
                           <tr>
                             <td>IMX_202001121155</td>
@@ -586,7 +541,7 @@ $.fn.dataTable.ext.search.push(
                             <td>28/04/2020</td>
                             <td>28/04/2020</td>
                             <td style = "color:green;font-style: italic;">Đã duyệt</td>
-                            <td><a href="">Chi tiết</a></td>
+                            <td><a href="report-detail.html">Chi tiết</a></td>
                           </tr>
                           <tr>
                             <td>IMX_202001121156</td>
@@ -690,7 +645,7 @@ $.fn.dataTable.ext.search.push(
                             <td>29/04/2020</td>
                             <td>29/04/2020</td>
                             <td style = "color:green;font-style: italic;">Đã duyệt</td>
-                            
+
                             <td><a href="">Chi tiết</a></td>
                           </tr>
                           <tr>
@@ -709,8 +664,8 @@ $.fn.dataTable.ext.search.push(
             </div>
           </div>
         </main>
-        
-          
+
+
         <!-- ### $App Screen Footer ### -->
         <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
           <span>Copyright © 2019 Designed by <a href="https://colorlib.com" target='_blank' title="Colorlib">Colorlib</a>. All rights reserved.</span>
