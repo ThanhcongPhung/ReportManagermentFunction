@@ -14,7 +14,7 @@
     "lint": "npm run lint:js && npm run lint:scss"
   },
   "engines": {
-    "node": "12.16.x",
+    "node": "8.x.x",
     "npm": "6.x",
     "yarn": "1.x"
   },
