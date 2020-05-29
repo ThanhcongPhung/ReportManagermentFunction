@@ -13,13 +13,7 @@
     "lint:scss": "stylelint ./src/**/*.scss --syntax scss",
     "lint": "npm run lint:js && npm run lint:scss"
   },
-  "engines": {
-
-    "node": "10.19.x",
-
-    "npm": "6.x",
-    "yarn": "1.x"
-  },
+  
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",

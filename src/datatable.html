@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Data Tables</title>
+    <title>Danh sách báo cáo</title>
     <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"  rel="stylesheet">
     <style>
       #loader {
@@ -149,7 +149,7 @@ $.fn.dataTable.ext.search.push(
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-green-500 ti-desktop"></i>
                 </span>
@@ -157,7 +157,7 @@ $.fn.dataTable.ext.search.push(
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-black-500 ti-user"></i>
                 </span>
@@ -165,7 +165,7 @@ $.fn.dataTable.ext.search.push(
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-red-500 ti-location-pin"></i>
                 </span>
@@ -173,7 +173,7 @@ $.fn.dataTable.ext.search.push(
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-world"></i>
                 </span>
@@ -208,6 +208,14 @@ $.fn.dataTable.ext.search.push(
                   </a>
                 </li>
                 <li>
+                  <a class='sidebar-link' href="compose.html">
+                    <span class="icon-holder">
+                      <i class="c-green-500 ti-layers"></i>
+                    </span>
+                    <span class="title">So sánh hình ảnh</span>
+                  </a>
+                </li>
+                <li>
                   <a class='sidebar-link' href="charts.html">
                     <span class="icon-holder">
                       <i class="c-indigo-500 ti-bar-chart"></i>
@@ -219,7 +227,7 @@ $.fn.dataTable.ext.search.push(
             </li>
 
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-green-500 ti-direction"></i>
                 </span>
@@ -227,7 +235,7 @@ $.fn.dataTable.ext.search.push(
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-yellow-500 ti-bolt"></i>
                 </span>
@@ -235,7 +243,7 @@ $.fn.dataTable.ext.search.push(
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-signal"></i>
                 </span>
@@ -243,7 +251,7 @@ $.fn.dataTable.ext.search.push(
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-black-500 ti-hand-open"></i>
                 </span>
@@ -251,20 +259,36 @@ $.fn.dataTable.ext.search.push(
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class='sidebar-link' href="#">
                 <span class="icon-holder">
                   <i class="c-brown-500 ti-pulse"></i>
                 </span>
                 <span class="title">Phân tích dữ liệu</span>
               </a>
             </li>
-
+            <li class="nav-item">
+              <a class='sidebar-link' href="ui.html">
+                <span class="icon-holder">
+                  <i class="c-brown-500 ti-info-alt"></i>
+                </span>
+                <span class="title">Về chúng tôi</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class='sidebar-link' href="#">
+                <span class="icon-holder">
+                  <i class="c-brown-500 ti-help-alt"></i>
+                </span>
+                <span class="title">Hướng dẫn sử dụng</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
       <!-- #Main ============================ -->
       <div class="page-container">
+        <!-- ### $Topbar ### -->
         <!-- ### $Topbar ### -->
         <div class="header navbar">
           <div class="header-container">
@@ -290,11 +314,11 @@ $.fn.dataTable.ext.search.push(
                 <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
                   <i class="ti-bell"></i>
                 </a>
-
+        
                 <ul class="dropdown-menu">
                   <li class="pX-20 pY-15 bdB">
                     <i class="ti-bell pR-10"></i>
-                    <span class="fsz-sm fw-600 c-grey-900">Notifications</span>
+                    <span class="fsz-sm fw-600 c-grey-900">Thông báo</span>
                   </li>
                   <li>
                     <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
@@ -306,11 +330,11 @@ $.fn.dataTable.ext.search.push(
                           <div class="peer peer-greed">
                             <span>
                               <span class="fw-500">John Doe</span>
-                              <span class="c-grey-600">liked your <span class="text-dark">post</span>
+                              <span class="c-grey-600">đã tạo 1 báo cáo<span class="text-dark"></span>
                               </span>
                             </span>
                             <p class="m-0">
-                              <small class="fsz-xs">5 mins ago</small>
+                              <small class="fsz-xs">5 phút trước</small>
                             </p>
                           </div>
                         </a>
@@ -323,11 +347,11 @@ $.fn.dataTable.ext.search.push(
                           <div class="peer peer-greed">
                             <span>
                               <span class="fw-500">Moo Doe</span>
-                              <span class="c-grey-600">liked your <span class="text-dark">cover image</span>
+                              <span class="c-grey-600">đã thông qua 1 báo cáo <span class="text-dark"></span>
                               </span>
                             </span>
                             <p class="m-0">
-                              <small class="fsz-xs">7 mins ago</small>
+                              <small class="fsz-xs">7 phút trước</small>
                             </p>
                           </div>
                         </a>
@@ -340,11 +364,11 @@ $.fn.dataTable.ext.search.push(
                           <div class="peer peer-greed">
                             <span>
                               <span class="fw-500">Lee Doe</span>
-                              <span class="c-grey-600">commented on your <span class="text-dark">video</span>
+                              <span class="c-grey-600">đã thông qua 1 báo cáo <span class="text-dark"></span>
                               </span>
                             </span>
                             <p class="m-0">
-                              <small class="fsz-xs">10 mins ago</small>
+                              <small class="fsz-xs">10 phút trước</small>
                             </p>
                           </div>
                         </a>
@@ -353,7 +377,8 @@ $.fn.dataTable.ext.search.push(
                   </li>
                   <li class="pX-20 pY-15 ta-c bdT">
                     <span>
-                      <a href="" class="c-grey-600 cH-blue fsz-sm td-n">View All Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a>
+                      <a href="" class="c-grey-600 cH-blue fsz-sm td-n">Xem tất cả các thông báo <i
+                          class="ti-angle-right fsz-xs mL-10"></i></a>
                     </span>
                   </li>
                 </ul>
@@ -363,11 +388,11 @@ $.fn.dataTable.ext.search.push(
                 <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
                   <i class="ti-email"></i>
                 </a>
-
+        
                 <ul class="dropdown-menu">
                   <li class="pX-20 pY-15 bdB">
                     <i class="ti-email pR-10"></i>
-                    <span class="fsz-sm fw-600 c-grey-900">Emails</span>
+                    <span class="fsz-sm fw-600 c-grey-900">Thư báo</span>
                   </li>
                   <li>
                     <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
@@ -383,11 +408,11 @@ $.fn.dataTable.ext.search.push(
                                   <p class="fw-500 mB-0">John Doe</p>
                                 </div>
                                 <div class="peer">
-                                  <small class="fsz-xs">5 mins ago</small>
+                                  <small class="fsz-xs">5 phút trước</small>
                                 </div>
                               </div>
                               <span class="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
+                                Gửi báo cáo về sự cố đường điện qua đợt giông lốc vừa rồi...
                               </span>
                             </div>
                           </div>
@@ -405,11 +430,11 @@ $.fn.dataTable.ext.search.push(
                                   <p class="fw-500 mB-0">Moo Doe</p>
                                 </div>
                                 <div class="peer">
-                                  <small class="fsz-xs">15 mins ago</small>
+                                  <small class="fsz-xs">15 phút trước</small>
                                 </div>
                               </div>
                               <span class="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
+                                Gửi số liệu báo cáo đã tổng hợp trong quý 3 năm 2020...
                               </span>
                             </div>
                           </div>
@@ -427,11 +452,11 @@ $.fn.dataTable.ext.search.push(
                                   <p class="fw-500 mB-0">Lee Doe</p>
                                 </div>
                                 <div class="peer">
-                                  <small class="fsz-xs">25 mins ago</small>
+                                  <small class="fsz-xs">25 phút trước</small>
                                 </div>
                               </div>
                               <span class="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
+                                Hình ảnh về sự cố gãy đổ cây làm đứt dây điện trong trận lốc tối ngày 25/05...
                               </span>
                             </div>
                           </div>
@@ -441,7 +466,8 @@ $.fn.dataTable.ext.search.push(
                   </li>
                   <li class="pX-20 pY-15 ta-c bdT">
                     <span>
-                      <a href="email.html" class="c-grey-600 cH-blue fsz-sm td-n">View All Email <i class="fs-xs ti-angle-right mL-10"></i></a>
+                      <a href="email.html" class="c-grey-600 cH-blue fsz-sm td-n">Xem tất cả email <i
+                          class="fs-xs ti-angle-right mL-10"></i></a>
                     </span>
                   </li>
                 </ul>
@@ -452,33 +478,22 @@ $.fn.dataTable.ext.search.push(
                     <img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
                   </div>
                   <div class="peer">
-                    <span class="fsz-sm c-grey-900">John Doe</span>
+                    <span class="fsz-sm c-grey-900">Công Phùng</span>
                   </div>
                 </a>
                 <ul class="dropdown-menu fsz-sm">
                   <li>
                     <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                       <i class="ti-settings mR-10"></i>
-                      <span>Setting</span>
+                      <span>Cài đặt</span>
                     </a>
                   </li>
-                  <li>
-                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i class="ti-user mR-10"></i>
-                      <span>Profile</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="email.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i class="ti-email mR-10"></i>
-                      <span>Messages</span>
-                    </a>
-                  </li>
+        
                   <li role="separator" class="divider"></li>
                   <li>
                     <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                       <i class="ti-power-off mR-10"></i>
-                      <span>Logout</span>
+                      <span>Đăng xuất</span>
                     </a>
                   </li>
                 </ul>
@@ -525,7 +540,7 @@ $.fn.dataTable.ext.search.push(
                     <table id="dataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
                       <thead>
                         <tr>
-                          <th>Mã báo cáo</th>
+                          <th>Tên báo cáo</th>
                           <th>Người báo cáo</th>
                           <th>Ngày báo cáo</th>
                           <th>Chỉnh sửa lần cuối</th>
@@ -536,7 +551,7 @@ $.fn.dataTable.ext.search.push(
 
                         <tbody>
                           <tr>
-                            <td>IMX_202001121155</td>
+                            <td>Báo cáo kiểm tra trạm điện Sơn Lộc</td>
                             <td>Đỗ Đình Hoàng</td>
                             <td>28/04/2020</td>
                             <td>28/04/2020</td>
@@ -545,7 +560,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121156</td>
+                            <td>Báo cáo kiểm tra đường dây cao thế 550kV</td>
                             <td>Đỗ Đình Hoàng</td>
                             <td>28/04/2020</td>
                             <td>28/04/2020</td>
@@ -553,7 +568,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121157</td>
+                            <td>Báo cáo kiểm tra đèn đường khu vực Trung Sơn Trầm</td>
                             <td>Phùng Thành Công</td>
                             <td>28/04/2020</td>
                             <td>28/04/2020</td>
@@ -561,7 +576,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121158</td>
+                            <td>Báo cáo kiểm tra sự cố đổ cột điện tại trạng Gò Mạ</td>
                             <td>Phạm Ngọc Bá</td>
                             <td>29/04/2020</td>
                             <td>29/04/2020</td>
@@ -569,7 +584,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121159</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 1</td>
                             <td>Đỗ Đình Hoàng</td>
                             <td>30/04/2020</td>
                             <td>30/04/2020</td>
@@ -577,7 +592,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121200</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 2</td>
                             <td>Phùng Thành Công</td>
                             <td>28/04/2020</td>
                             <td>28/04/2020</td>
@@ -585,7 +600,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121201</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 3</td>
                             <td>Phạm Ngọc Bá</td>
                             <td>29/04/2020</td>
                             <td>29/04/2020</td>
@@ -593,7 +608,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121202</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 3</td>
                             <td>Đỗ Đình Hoàng</td>
                             <td>30/04/2020</td>
                             <td>30/04/2020</td>
@@ -601,7 +616,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121600</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 3</td>
                             <td>Đỗ Đình Hoàng</td>
                             <td>28/04/2020</td>
                             <td>28/04/2020</td>
@@ -609,7 +624,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121257</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 3</td>
                             <td>Phùng Thành Công</td>
                             <td>28/04/2020</td>
                             <td>28/04/2020</td>
@@ -617,7 +632,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121258</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 3</td>
                             <td>Phạm Ngọc Bá</td>
                             <td>29/04/2020</td>
                             <td>29/04/2020</td>
@@ -625,7 +640,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121259</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 3</td>
                             <td>Đỗ Đình Hoàng</td>
                             <td>30/04/2020</td>
                             <td>30/04/2020</td>
@@ -633,7 +648,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121257</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 37</td>
                             <td>Phùng Thành Công</td>
                             <td>28/04/2020</td>
                             <td>28/04/2020</td>
@@ -641,7 +656,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121258</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 3</td>
                             <td>Phạm Ngọc Bá</td>
                             <td>29/04/2020</td>
                             <td>29/04/2020</td>
@@ -650,7 +665,7 @@ $.fn.dataTable.ext.search.push(
                             <td><button class = "btn-sm" style = "color:black;background-color: #fff;"onclick="window.open('report-detail.html', '_blank', 'width=1000,height=700');" >Chi tiết</button></td>
                           </tr>
                           <tr>
-                            <td>IMX_202001121259</td>
+                            <td>Báo cáo kiểm tra đường tải điện khu dân cư số 3 </td>
                             <td>Đỗ Đình Hoàng</td>
                             <td>30/04/2020</td>
                             <td>30/04/2020</td>
