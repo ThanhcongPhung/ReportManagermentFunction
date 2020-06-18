@@ -59,6 +59,7 @@
 .datepicker table tr td span.focused {
   background: $default-primary;
   color: #fff;
+  border: 1px solid $border-color;
 }
 
 .datepicker table tr td.day:hover,
