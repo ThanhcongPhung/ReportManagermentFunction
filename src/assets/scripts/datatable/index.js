@@ -42,6 +42,7 @@ $(document).ready(function () {
             return false;
         }
     );
+    
     $('#min').datepicker({ onSelect: function () { table.draw(); }, changeMonth: true, changeYear: true });
     $('#max').datepicker({ onSelect: function () { table.draw(); }, changeMonth: true, changeYear: true });
     var table = $('#dataTable').DataTable();
@@ -49,4 +50,30 @@ $(document).ready(function () {
     $('#min, #max').change(function () {
         table.draw();
     });
+    var select = $('#reporter').on( 'change', function () {
+      table.column(1)
+          .search( $(this).val() )
+          .draw();
+    } );
+    table.column( 1 ).data().unique().sort().each( function ( d, j ) {
+      select.append( '<option value="'+d+'">'+d+'</option>' )});
+      var select_scope = $('#scope').on( 'change', function () {
+        table.column(3)
+            .search( $(this).val() )
+            .draw();
+      } );
+      table.column( 3 ).data().unique().sort().each( function ( d, j ) {
+        select_scope.append( '<option value="'+d+'">'+d+'</option>' )});
+    
+  //   $("#filter div p").each( function ( i ) {
+  //     var select = $('<select><option value=""></option></select>')
+  //         .appendTo( $(this).empty() )
+  //         .on( 'change', function () {
+  //             table.column( i )
+  //                 .search( $(this).val() )
+  //                 .draw();
+  //         } );
+
+      
+  // } );
 });
