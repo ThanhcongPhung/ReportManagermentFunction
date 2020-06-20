@@ -21,6 +21,39 @@
         opacity: 0;
         visibility: hidden;
       }
+       .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  display: none;
+  /* padding: 6px 12px; */
+  border: 1px solid #ccc;
+  border-top: none;
+}
 
       .spinner {
         width: 40px;
@@ -82,6 +115,23 @@
           loader.classList.add('fadeOut');
         }, 300);
       });
+      function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+      </script>
     </script>
 
     <!-- @App Content -->
@@ -564,77 +614,21 @@
                   </div>
                 </div>
               </div>
+
               <div class="masonry-item col-12">
+                
                 <!-- #Site Visits ==================== -->
                 <div class="bd bgc-white">
                   <div class="peers fxw-nw@lg+ ai-s">
-                    <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
-                      <div class="layers">
-
-                    <div class="layer w-100">
-                      <div class="bgc-light-blue-500 c-white p-20">
-                        <div class="peers ai-c jc-sb gap-40">
-                          <div class="peer peer-greed">
-
-
-                            <p class="mB-0">Danh sách báo cáo</p>
+                      <!-- #map ==================== -->
+                      <div class="bd bgc-white">
+                          <div class="layers">                                    
+                            <div class="layer w-100">
+                                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=10K6ZdPTg4RgMj2RBu-vwm5l51iqHAzfe" width="100%"
+                                              height="500px"></iframe>
+                            </div>                               
                           </div>
-                          <div class="peer">
-                            <h3 class="text-right"></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="table-responsive p-20">
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th class=" bdwT-0">Tên báo cáo</th>
-                              <th class=" bdwT-0">Trạng thái</th>
-                              <th class=" bdwT-0">Ngày tạo</th>
-                              <th class=" bdwT-0">Người báo cáo </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="fw-600">Báo cáo kiểm tra trạm điện Sơn Lộc</td>
-                              <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span> </td>
-                              <td>20/05/2020</td>
-                              <td><span class="text-info">Phùng Thành Công</span></td>
-                            </tr>
-                            <tr>
-                              <td class="fw-600">Báo cáo kiểm tra đường dây cao thế 550kV</td>
-                              <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span></td>
-                              <td>25/05/2020</td>
-                              <td><span class="text-info">Nguyễn Hữu Mạnh</span></td>
-                            </tr>
-                            <tr>
-                              <td class="fw-600">Báo cáo kiểm tra đèn đường khu vực Trung Sơn Trầm</td>
-                              <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span></td>
-                              <td>25/05/2020</td>
-                              <td><span class="text-info">Phạm Ngọc Bá</span></td>
-                            </tr>
-                            <tr>
-                              <td class="fw-600">Báo cáo kiểm tra sự cố đổ cột điện tại trạng Gò Mạ</td>
-                              <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Đã duyệt</span></td>
-                              <td>25/05/2020</td>
-                              <td><span class="text-info">Nguyễn Hữu Mạnh</span></td>
-                            </tr>
-                            <tr>
-                              <td class="fw-600">Báo cáo kiểm tra đường tải điện khu dân cư số 1</td>
-                              <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Đã duyệt</span></td>
-                              <td>20/05/2020</td>
-                              <td><span class="text-info">Phùng Thành Công</span></td>
-                            </tr>
-                            
-                          </tbody>
-                        </table>
-                        <div class="ta-c bdT w-100 p-20">
-                          <a href="datatable.html">Hiển thị danh sách báo cáo</a>
-                        </div>
-                       </div>
-                    </div>
-                  </div>
-                    </div>
+                        </div>           
                     <div class="peer bdL p-20 w-30p@lg+ w-100p@lg-">
                       <div class="layers">
                         <div class="layer w-100">
@@ -645,7 +639,8 @@
                               <small class="fw-600 c-grey-700">Số lượng báo cáo đã duyệt</small>
                               <span class="pull-right c-grey-600 fsz-sm">50%</span>
                               <div class="progress mT-10">
-                                <div class="progress-bar bgc-deep-purple-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;"> <span class="sr-only">50% Complete</span></div>
+                                <div class="progress-bar bgc-deep-purple-500" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                  aria-valuemax="100" style="width:50%;"> <span class="sr-only">50% Complete</span></div>
                               </div>
                             </div>
                             <div class="layer w-100 mT-15">
@@ -653,7 +648,8 @@
                               <small class="fw-600 c-grey-700">Số lượng thiết bị đạt tiêu chuẩn</small>
                               <span class="pull-right c-grey-600 fsz-sm">80%</span>
                               <div class="progress mT-10">
-                                <div class="progress-bar bgc-green-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">80% Complete</span></div>
+                                <div class="progress-bar bgc-green-500" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                  aria-valuemax="100" style="width:80%;"> <span class="sr-only">80% Complete</span></div>
                               </div>
                             </div>
                             <div class="layer w-100 mT-15">
@@ -661,7 +657,8 @@
                               <small class="fw-600 c-grey-700">Số lượng sự cố đã xử lý</small>
                               <span class="pull-right c-grey-600 fsz-sm">40%</span>
                               <div class="progress mT-10">
-                                <div class="progress-bar bgc-light-blue-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:40%;"> <span class="sr-only">40% Complete</span></div>
+                                <div class="progress-bar bgc-light-blue-500" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                  aria-valuemax="100" style="width:40%;"> <span class="sr-only">40% Complete</span></div>
                               </div>
                             </div>
                             <div class="layer w-100 mT-15">
@@ -669,11 +666,12 @@
                               <small class="fw-600 c-grey-700">Số lượng thiết bị gặp sự cố</small>
                               <span class="pull-right c-grey-600 fsz-sm">90%</span>
                               <div class="progress mT-10">
-                                <div class="progress-bar bgc-blue-grey-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:90%;"> <span class="sr-only">90% Complete</span></div>
+                                <div class="progress-bar bgc-blue-grey-500" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                  aria-valuemax="100" style="width:90%;"> <span class="sr-only">90% Complete</span></div>
                               </div>
                             </div>
                           </div>
-
+                    
                           <!-- Pie Charts -->
                           <div class="peers pT-20 mT-20 bdT fxw-nw@lg+ jc-sb ta-c gap-10">
                             <div class="peer">
@@ -698,6 +696,175 @@
                         </div>
                       </div>
                     </div>
+                    <div class="layer w-100">
+                      <div class="bgc-light-blue-500 c-white p-20">
+                        <div class="peers ai-c jc-sb gap-40">
+                          <div class="peer peer-greed">
+                            <p class="mB-0">Danh sách báo cáo</p>
+                          </div>
+                          <div class="peer">
+                            <h3 class="text-right"></h3>
+                          </div>
+                        </div>
+                        <div class="tab">
+                          <button class="tablinks" onclick="openCity(event, 'level1')" id="defaultOpen">Thiết bị mức an toàn</button>
+                          <button class="tablinks" onclick="openCity(event, 'level2')" id="defaultOpen">Thiết bị đang có nguy cơ</button>
+                          <button class="tablinks" onclick="openCity(event, 'level3')" id="defaultOpen">Thiết bị hư hại</button>
+                        </div>
+                        
+                      </div>
+                      <div class="table-responsive p-20">
+                        <div id="level1" class="tabcontent">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class=" bdwT-0">Tên báo cáo</th>
+                                <th class=" bdwT-0">Trạng thái</th>
+                                <th class=" bdwT-0">Ngày tạo</th>
+                                <th class=" bdwT-0">Người báo cáo </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra trạm điện Sơn Lộc</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span> </td>
+                                <td>20/05/2020</td>
+                                <td><span class="text-info">Phùng Thành Công</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đường dây cao thế 550kV</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Nguyễn Hữu Mạnh</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đèn đường khu vực Trung Sơn Trầm</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Phạm Ngọc Bá</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra sự cố đổ cột điện tại trạng Gò Mạ</td>
+                                <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Đã duyệt</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Nguyễn Hữu Mạnh</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đường tải điện khu dân cư số 1</td>
+                                <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Đã duyệt</span></td>
+                                <td>20/05/2020</td>
+                                <td><span class="text-info">Phùng Thành Công</span></td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                          <div class="ta-c bdT w-100 p-20">
+                            <a href="datatable.html">Hiển thị danh sách báo cáo</a>
+                          </div>
+                        </div>
+                        
+                        <div id="level2" class="tabcontent">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class=" bdwT-0">Tên báo cáo</th>
+                                <th class=" bdwT-0">Trạng thái</th>
+                                <th class=" bdwT-0">Ngày tạo</th>
+                                <th class=" bdwT-0">Người báo cáo </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra trạm điện trung sơn trầm</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span> </td>
+                                <td>20/05/2020</td>
+                                <td><span class="text-info">Phùng Thành Công</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đường dây cao thế 550kV</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Nguyễn Hữu Mạnh</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đèn đường khu vực Trung Sơn Trầm</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Phạm Ngọc Bá</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra sự cố đổ cột điện tại trạng Gò Mạ</td>
+                                <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Đã duyệt</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Nguyễn Hữu Mạnh</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đường tải điện khu dân cư số 1</td>
+                                <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Đã duyệt</span></td>
+                                <td>20/05/2020</td>
+                                <td><span class="text-info">Phùng Thành Công</span></td>
+                              </tr>
+                          
+                            </tbody>
+                          </table>
+                          <div class="ta-c bdT w-100 p-20">
+                            <a href="datatable.html">Hiển thị danh sách báo cáo</a>
+                          </div>
+                        </div>
+                        
+                        <div id="level3" class="tabcontent">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class=" bdwT-0">Tên báo cáo</th>
+                                <th class=" bdwT-0">Trạng thái</th>
+                                <th class=" bdwT-0">Ngày tạo</th>
+                                <th class=" bdwT-0">Người báo cáo </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra trạm điện tây an</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span> </td>
+                                <td>20/05/2020</td>
+                                <td><span class="text-info">Phùng Thành Công</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đường dây cao thế 550kV</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Nguyễn Hữu Mạnh</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đèn đường khu vực Trung Sơn Trầm</td>
+                                <td><span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">Đang chờ</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Phạm Ngọc Bá</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra sự cố đổ cột điện tại trạng Gò Mạ</td>
+                                <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Đã duyệt</span></td>
+                                <td>25/05/2020</td>
+                                <td><span class="text-info">Nguyễn Hữu Mạnh</span></td>
+                              </tr>
+                              <tr>
+                                <td class="fw-600">Báo cáo kiểm tra đường tải điện khu dân cư số 1</td>
+                                <td><span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">Đã duyệt</span></td>
+                                <td>20/05/2020</td>
+                                <td><span class="text-info">Phùng Thành Công</span></td>
+                              </tr>
+                          
+                            </tbody>
+                          </table>
+                          <div class="ta-c bdT w-100 p-20">
+                            <a href="datatable.html">Hiển thị danh sách báo cáo</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -798,21 +965,7 @@
                   </div>
                 </div>
               </div>
-              <div class="masonry-item col-md-12">
-                <!-- #Danh sách báo cáo ==================== -->
-                <div class="bd bgc-white">
-                  <div class="layers">
-
-                      <div class="layer w-100">
-                         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=10K6ZdPTg4RgMj2RBu-vwm5l51iqHAzfe" width="100%" height="500px"></iframe>
-                      </div>
-
-                       
-                       
-                    </div>
-                  </div>
-
-                </div>
+              
               </div>
 
 
