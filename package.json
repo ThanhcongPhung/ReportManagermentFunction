@@ -58,6 +58,7 @@
     "jquery": "^3.2.1",
     "jquery-sparkline": "^2.4.0",
     "jvectormap": "^2.0.4",
+    "lightpick": "^1.6.2",
     "load-google-maps-api": "^1.0.0",
     "lodash": "^4.17.4",
     "masonry-layout": "^4.2.0",

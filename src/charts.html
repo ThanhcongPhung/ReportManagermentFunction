@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Thống kê số liệu</title>
     <style>
+      .tab-bar{
+        background-color: #fff;
+
+      }
+      .tab-bar ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: rgb(255, 255, 255);
+          display: inline-block;
+        }
+
+        .tab-bar li {
+          float: left;
+          border-right:1px solid rgb(136, 135, 135);
+        }
+
+        .tab-bar li:last-child {
+          border-right: none;
+        }
+
+        .tab-bar li a {
+          display: block;
+          color: rgb(44, 44, 44);
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        .tab-bar li a:hover:not(.active) {
+          background-color: rgb(81, 255, 159);
+        }
+
+        .tab-bar .active {
+          background-color: rgb(95, 176, 223);
+        }
+        .form-row{
+          display: inline-block;
+          float: right;
+        }
+        .form-row .form-group{
+          margin: 0;
+        }
+      
+
+      .show {display: block;}
       #loader {
         transition: all 0.3s ease-in-out;
         opacity: 1;
@@ -488,71 +535,212 @@
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
-            <div class="row gap-20 masonry pos-r">
-              <div class="masonry-sizer col-md-6 pos-a"></div>
-              <div class="masonry-item col-md-6">
-                <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Biểu đồ mức năng lượng sử dụng</h6>
-                  <div class="mT-30">
-                    <canvas id="line-chart" height="220"></canvas>
+            <div>
+              <h5 class="c-grey-900 mT-10 mB-30"><a href="index.html" style="font-style: italic;"><u>Báo cáo</u></a>/<a style="font-style: italic;"><u>Thống kê số liệu</u></a></h5></br>
+            </div>
+            
+            <div class="tab-bar" style="display: inline-block; width: 100%; margin-bottom: 6px;">
+              <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                <li class="nav-item">
+                    <a role="tab" class="nav-link active" id="tab-0" data-toggle="tab" href="#tab-content-0">
+                        <span>Thống kê Drone</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a role="tab" class="nav-link" id="tab-1" data-toggle="tab" href="#tab-content-1">
+                        <span>Thống kê cảnh báo</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="form-row">
+              <div class="form-group">
+                <div class="timepicker-input input-icon form-group">
+                  <div class="input-group">
+                    <div class="input-group-addon bgc-white bd bdwR-0">
+                      <i class="ti-calendar"></i>
+                    </div>
+                    <input id="min" type="text" class="form-control bdc-grey-200 start-date" placeholder="Từ" data-provide="datepicker">
                   </div>
                 </div>
               </div>
-              <div class="masonry-item col-md-6">
-                <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Biểu đồ thống kê cảnh báo</h6>
-                  <div class="mT-30">
-                    <canvas id="area-chart" height="220"></canvas>
+              <div class="form-group">
+                <div class="timepicker-input input-icon form-group">
+                  <div class="input-group">
+                    <div class="input-group-addon bgc-white bd bdwR-0">
+                      <i class="ti-calendar"></i>
+                    </div>
+                    <input id = "max" type="text" class="form-control bdc-grey-200 end-date" placeholder="Đến" data-provide="datepicker">
                   </div>
                 </div>
               </div>
               
-              <div class="masonry-item col-md-6">
-                <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Cảnh báo thiết bị</h6>
-                  <div class="mT-30">
-                    <canvas id="bar-chart" height="220"></canvas>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="masonry-item col-md-6">
-                <div class="bgc-white p-20 bd">
-                  <h6 class="c-grey-900">Tỷ lệ phát sinh lỗi</h6>
-                  <div class="mT-30">
-                    <div class="peers mT-20 fxw-nw@lg+ jc-sb ta-c gap-10">
-                      <div class="peer">
-                        <div class="easy-pie-chart" data-size='80' data-percent="7.3" data-bar-color='#f44336'>
-                          <span></span>
+            </div>
+       
+          </div>
+          <div class="tab-content">
+              <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="main-card mb-3 card">
+                              <div class="card-body">
+                                  <h5 class="card-title">Tần suất hoạt động</h5>
+                                  <canvas id="drone-frequency"></canvas>
+                              </div>
+                          </div>
+                          <div class="masonry-item col-md-12">
+                            <div class="bgc-white p-20 bd">
+                              <h6 class="c-grey-900">Thống kê drone</h6>
+                              <div class="mT-30">
+                                <div class="peers mT-20 fxw-nw@lg+ jc-sb ta-c gap-10">
+                                  <div class="peer">
+                                    <div class="easy-pie-chart"  data-size='80' data-percent="82.3" data-bar-color='#f44336'>
+                                      <span></span>
+                                    </div>
+                                    <h6 class="fsz-sm">Drone hoạt động tốt </h6>
+                                  </div>
+                                  <div class="peer">
+                                    <div class="easy-pie-chart" data-size='80' data-percent="6.2" data-bar-color='#2196f3'>
+                                      <span></span>
+                                    </div>
+                                    <h6 class="fsz-sm">Drone phát sinh lỗi</h6>
+                                  </div>
+                                  <div class="peer">
+                                    <div class="easy-pie-chart" data-size='80' data-percent="11.5" data-bar-color='#2896f3'>
+                                      <span></span>
+                                    </div>
+                                    <h6 class="fsz-sm">Drone không sử dụng</h6>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <h6 class="fsz-sm">Cột điện </h6>
+
+                        <div class="col-lg-6">
+                          <div class="main-card mb-3 card">
+                              <div class="card-body"><h5 class="card-title">Danh sách sử dụng drone</h5>
+                                  <table class="mb-0 table table-hover">
+                                      <thead>
+                                      <tr>
+                                          <th>#</th>
+                                          <th>Nhân viên</th>
+                                          <th>Drone</th>
+                                          <th>Thời gian mượn</th>
+                                          <th>Thời gian trả</th>
+
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <th scope="row">1</th>
+                                          <td>Phạm Ngọc Bá</td>
+                                          <td>Drone 1</td>
+                                          <td>10/06/2020 09:23</td>
+                                          <td>10/06/2020 11:25</td>
+
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Phạm Ngọc Bá</td>
+                                        <td>Drone 1</td>
+                                        <td>11/06/2020 09:23</td>
+                                        <td>11/06/2020 10:25</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td>Nguyễn Hữu Mạnh</td>
+                                        <td>Drone 2</td>
+                                        <td>12/06/2020 09:29</td>
+                                        <td>12/06/2020 11:15</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">4</th>
+                                        <td>Phùng Thành Công</td>
+                                        <td>Drone 6</td>
+                                        <td>13/06/2020 09:23</td>
+                                        <td>13/06/2020 11:25</td>
+
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">5</th>
+                                      <td>Phùng Thành Công</td>
+                                      <td>Drone 3</td>
+                                      <td>13/06/2020 16:23</td>
+                                      <td>13/06/2020 18:25</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">6</th>
+                                      <td>Đỗ Đình Hoàng</td>
+                                      <td>Drone 2</td>
+                                      <td>15/06/2020 09:29</td>
+                                      <td>15/06/2020 11:15</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">7</th>
+                                      <td>Đỗ Đình Hoàng</td>
+                                      <td>Drone 1</td>
+                                      <td>18/06/2020 09:23</td>
+                                      <td>18/06/2020 11:25</td>
+
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">8</th>
+                                    <td>Nguyễn Hữu Mạnh</td>
+                                    <td>Drone 1</td>
+                                    <td>18/06/2020 09:23</td>
+                                    <td>18/06/2020 10:25</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">9</th>
+                                    <td>Đỗ Đình Hoàng</td>
+                                    <td>Drone 2</td>
+                                    <td>19/06/2020 09:29</td>
+                                    <td>19/06/2020 11:15</td>
+                                  </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
                       </div>
-                      <div class="peer">
-                        <div class="easy-pie-chart" data-size='80' data-percent="3.2" data-bar-color='#2196f3'>
-                          <span></span>
-                        </div>
-                        <h6 class="fsz-sm">Dây điện</h6>
-                      </div>
-                      <div class="peer">
-                        <div class="easy-pie-chart" data-size='80' data-percent="6" data-bar-color='#f44336'>
-                          <span></span>
-                        </div>
-                        <h6 class="fsz-sm">Trạm biến áp</h6>
-                      </div>
-                      <div class="peer">
-                        <div class="easy-pie-chart" data-size='80' data-percent="2.2" data-bar-color='#ff9800'>
-                          <span></span>
-                        </div>
-                        <h6 class="fsz-sm">Bóng điện</h6>
-                      </div>
+
                     </div>
                   </div>
-                </div>
+              <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="main-card mb-3 card">
+                              <div class="card-body">
+                                  <h5 class="card-title">Thống kê cảnh báo</h5>
+                                  <canvas id="area-chart" height="180"></canvas>
+                                </div>
+                          </div>
+                          <div class="main-card mb-3 card">
+                              <div class="card-body">
+                                  <h5 class="card-title">Thống kê theo tháng</h5>
+                                  <div>
+                                    <canvas id="line-chart" height="200"></canvas>
+                                </div>                                </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="main-card mb-3 card">
+                              <div class="card-body">
+                                  <h5 class="card-title">Biểu đồ cảnh báo thiết bị</h5>
+                                  <canvas id="bar-chart" height="240"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
+          </div>    
+                        
             </div>
-          </div>
         </main>
       </div>
     </div>
+    
+   
+
   </body>
 </html>
