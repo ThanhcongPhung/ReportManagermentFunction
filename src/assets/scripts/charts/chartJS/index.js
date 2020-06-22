@@ -4,7 +4,8 @@ import { COLORS } from '../../constants/colors';
 export default (function () {
   // ------------------------------------------------------
   // @Line Charts
-  // ------------------------------------------------------
+  // -----------------------------------------------------
+
 
   const lineChartBox = document.getElementById('line-chart');
 
@@ -52,6 +53,7 @@ export default (function () {
   // ------------------------------------------------------
   // @Bar Charts
   // ------------------------------------------------------
+  var randomScalingFactor = function(){ return Math.round(Math.random()*12)};
 
   const barChartBox = document.getElementById('bar-chart');
 
@@ -61,31 +63,55 @@ export default (function () {
     new Chart(barCtx, {
       type: 'bar',
       data: {
-        labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'],
+        labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7'],
         datasets: [{
-          label           : 'Cột điện',
+          label           : 'Cột cao thế',
           backgroundColor : COLORS['deep-purple-500'],
           borderColor     : COLORS['deep-purple-800'],
           borderWidth     : 1,
-          data            : [2, 1, 3, 1, 0],
+          data            : [randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()],
         }, {
           label           : 'Dây điện',
           backgroundColor : COLORS['light-blue-500'],
           borderColor     : COLORS['light-blue-800'],
           borderWidth     : 1,
-          data            : [3, 4, 5, 3, 2],
+          data            : [randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()],
         },{
           label           : 'Trạm biến áp',
           backgroundColor : COLORS['green-500'],
           borderColor     : COLORS['green-800'],
           borderWidth     : 1,
-          data            : [1,2,1,1,0],
+          data            : [randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()],
         },{
-          label           : 'Bóng điện',
+          label           : 'Cột điện thường',
           backgroundColor : COLORS['yellow-500'],
           borderColor     : COLORS['yellow-800'],
           borderWidth     : 1,
-          data            : [6,7,7,8,4],
+          data            : [randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()],
         }],
       },
 
@@ -97,6 +123,7 @@ export default (function () {
       },
     });
   }
+
 
   // ------------------------------------------------------
   // @Area Charts
@@ -116,10 +143,37 @@ export default (function () {
           borderColor     : COLORS['light-blue-800'],
           data            : [10, 13, 9, 15, 4],
           label           : 'Số cảnh baó',
-          fill            : 'start',
+          fill            : 'false',
         }],
       },
     });
   }
 
+
+
+  const droneFrequency = document.getElementById('drone-frequency');
+
+  if (droneFrequency) {
+    const barCtx = droneFrequency.getContext('2d');
+    new Chart(barCtx, {
+      type: 'horizontalBar',
+      data: {
+        labels: ["Drone1","Drone2","Drone3","Drone4","Drone5","Drone6"],
+        datasets: [
+                {
+                    backgroundColor: COLORS['purple-800'],
+                    borderColor     : COLORS['light-blue-800'],
+                    borderWidth: 1,
+                    data: [60, 80, 81, 56, 55, 40]
+                }
+            ]
+        },
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+      },
+    });
+  }
 }())
